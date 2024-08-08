@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 
 const AdminPage = () => {
-  return <Text>Profile</Text>;
+  return <Text>Admin area</Text>;
 };
 export default AdminPage;
