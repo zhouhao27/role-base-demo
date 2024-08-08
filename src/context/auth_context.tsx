@@ -49,12 +49,20 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
     }
   };
 
+  const logout = () => {
+    setAuthState({
+      authenticated: false,
+      username: null,
+      role: null,
+    });
+  };
+
   return (
     <AuthContext.Provider
       value={{
         authState,
         onLogin: login,
-        onLogout: () => setAuthState({ authenticated: false, username: null, role: null }),
+        onLogout: logout,
       }}>
       {children}
     </AuthContext.Provider>

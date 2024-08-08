@@ -13,8 +13,6 @@ const Page = () => {
     onLogin!(username, password);
   };
 
-  console.log('render login page');
-
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
